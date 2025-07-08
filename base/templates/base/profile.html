@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block title %}Profile - BiteTracker{% endblock %}
+
+{% block content %}
+  <div class="profile-container">
+    <h2>Welcome to your Profile, {{ user.username }}!</h2>
+    <p>This is a temporary profile page. You can add more details here in the future.</p>
+    
+    <a href="{% url 'home' %}" class="btn-primary">Go to Home</a>
+    <a href="{% url 'logout' %}" class="btn-secondary">Logout</a>
+  </div>
+{% endblock %}

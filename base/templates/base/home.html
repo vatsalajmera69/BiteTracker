@@ -1,0 +1,109 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block title %}Home - BiteTracker{% endblock %}
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-bg-video">
+    <source src="{% static 'videos/healthy.mp4' %}" type="video/mp4" />
+    Your browser does not support HTML5 video.
+  </video>
+  <div class="hero-content">
+    <h2>Your Journey to Better Health Starts Here</h2>
+    <p>Get personalized diet plans, health tips, and fitness guidance tailored to your lifestyle.</p>
+    <a href="#services" class="btn-secondary">Get Started</a>
+  </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section light">
+
+  <!-- Health Tips Slider -->
+  <section class="slider-section">
+    <h3 class="section-title">Latest Health Tips</h3>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box">
+          <h4>💧 Stay Hydrated</h4>
+          <p>Drink at least 8 glasses of water daily to keep your body and mind fresh.</p>
+        </div>
+        <div class="swiper-slide box">
+          <h4>🥗 Eat Greens</h4>
+          <p>Incorporate leafy vegetables into your diet for essential nutrients.</p>
+        </div>
+        <div class="swiper-slide box">
+          <h4>🛏️ Sleep Well</h4>
+          <p>Aim for 7–8 hours of sleep to improve immunity and mental health.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Swiper -->
+  <h3 class="section-title">Our Services</h3>
+  <div class="swiper servicesSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide service-card">
+        <h4>📝 Personalized Diet Plans</h4>
+        <p>Customized meals for your goals, allergies, and habits.</p>
+      </div>
+      <div class="swiper-slide service-card">
+        <h4>💪 Fitness Guidance</h4>
+        <p>Home workouts with progress tracking and video support.</p>
+      </div>
+      <div class="swiper-slide service-card">
+        <h4>🧘 Mental Wellness</h4>
+        <p>Meditation, breathing exercises, and mood tracking tools.</p>
+      </div>
+      <div class="swiper-slide service-card">
+        <h4>🤖 AI Chatbot</h4>
+        <p>Get instant answers to your diet and wellness questions anytime.</p>
+      </div>
+      <div class="swiper-slide service-card">
+        <h4>🔥 Calorie Tracking</h4>
+        <p>Track your daily calorie intake with smart suggestions.</p>
+      </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+  <h3 class="section-title">Why Choose NutriWell?</h3>
+  <p class="about-text">We offer a holistic health system powered by real experts and AI tools to help you live better.</p>
+</section>
+
+<!-- Testimonials -->
+<section class="section testimonials">
+  <h3 class="section-title">What Our Users Say</h3>
+  <div class="container testimonial-cards">
+    <div class="testimonial">
+      <p>“I’ve lost 10kg and feel amazing. It’s simple and works.”</p>
+      <span>– Priya, 28</span>
+    </div>
+    <div class="testimonial">
+      <p>“My stress levels are lower and I’m more focused now.”</p>
+      <span>– Arjun, 35</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section light">
+  <h3 class="section-title">Contact Us</h3>
+  <form class="contact-form" id="contactForm">
+    <input type="text" placeholder="Name" id="name" required />
+    <input type="email" placeholder="Email" id="email" required />
+    <textarea placeholder="Your Message" id="message" rows="5" required></textarea>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+  <p id="formMessage" class="center-text"></p>
+</section>
+
+{% endblock %}
